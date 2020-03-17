@@ -18,6 +18,7 @@ const baseEslintConfig = {
         "@typescript-eslint",
         "eslint-plugin-import-order-alphabetical",
         "jsdoc",
+        "import",
     ],
     extends: [
         "eslint:recommended",
@@ -53,6 +54,9 @@ const baseEslintConfig = {
         "import/resolver": {
             node: {
                 extensions: [".js", ".ts"],
+            },
+            typescript: {
+                alwaysTryTypes: true,
             },
         },
         "import/parsers": {
