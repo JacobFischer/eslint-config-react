@@ -1,6 +1,13 @@
 // @ts-check
 /* eslint-env node */
 
+const { dirname } = require("path");
+const { ESLINT_PATH_TSCONFIG } = process.env;
+
+if (!ESLINT_PATH_TSCONFIG || typeof ESLINT_PATH_TSCONFIG !== "string") {
+    throw new Error("Cannot use this eslint config file with process.env.ESLINT_PATH_TSCONFIG set");
+}
+
 // const ENABLED_ERROR = "error";
 const ENABLED_WARNING = "warn";
 
@@ -12,6 +19,7 @@ const baseEslintConfig = {
     parser: "@typescript-eslint/parser",
     parserOptions: {
         ecmaVersion: 2020,
+        project: ESLINT_PATH_TSCONFIG,
         sourceType: "module",
     },
     plugins: [
@@ -57,6 +65,7 @@ const baseEslintConfig = {
             },
             typescript: {
                 alwaysTryTypes: true,
+                directory: dirname(ESLINT_PATH_TSCONFIG),
             },
         },
         "import/parsers": {

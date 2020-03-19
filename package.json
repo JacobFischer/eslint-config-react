@@ -15,6 +15,7 @@
     "eslint",
     "eslintconfig"
   ],
+  "private": true,
   "homepage": "https://github.com/JacobFischer/eslint-config#readme",
   "main": "index.js",
   "dependencies": {

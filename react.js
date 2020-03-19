@@ -1,6 +1,12 @@
 // @ts-check
 /* eslint-env node */
 
+const { ESLINT_PATH_BABELCONFIG } = process.env;
+
+if (!ESLINT_PATH_BABELCONFIG || typeof ESLINT_PATH_BABELCONFIG !== "string") {
+    throw new Error("Cannot use this eslint config file with process.env.ESLINT_PATH_BABELCONFIG set");
+}
+
 /** @type {import("eslint").Linter.Config} */
 const reactEslintConfig = {
     env: {
@@ -8,6 +14,9 @@ const reactEslintConfig = {
     },
     parser: "@typescript-eslint/parser",
     parserOptions: {
+        babelOptions: {
+            configFile: ESLINT_PATH_BABELCONFIG,
+        },
         ecmaFeatures: {
             jsx: true,
         },
