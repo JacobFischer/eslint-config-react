@@ -19,25 +19,25 @@
   "homepage": "https://github.com/JacobFischer/eslint-config#readme",
   "main": "index.js",
   "dependencies": {
-    "@types/eslint": "6.1.8",
-    "@typescript-eslint/parser": "2.25.0",
-    "eslint-config-prettier": "6.10.1",
+    "@types/eslint": "6.8.0",
+    "@typescript-eslint/parser": "2.32.0",
+    "eslint-config-prettier": "6.11.0",
     "eslint-import-resolver-typescript": "2.0.0"
   },
   "devDependencies": {
-    "eslint": "6.8.0",
-    "npm-check-updates": "4.1.0",
-    "prettier": "2.0.2",
+    "eslint": "7.0.0",
+    "npm-check-updates": "5.0.0",
+    "prettier": "2.0.5",
     "typescript": "3.8.3"
   },
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.25.0",
-    "eslint-plugin-import": "^2.20.1",
+    "@typescript-eslint/eslint-plugin": "^2.32.0",
+    "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-import-order-alphabetical": "^1.0.0",
-    "eslint-plugin-jest": "^23.8.2",
-    "eslint-plugin-jsdoc": "^22.1.0",
+    "eslint-plugin-jest": "^23.10.0",
+    "eslint-plugin-jsdoc": "^25.2.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-prettier": "^3.1.3",
     "eslint-plugin-react": "^7.19.0"
   },
   "scripts": {
