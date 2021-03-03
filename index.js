@@ -11,8 +11,6 @@ if (!ESLINT_PATH_BABELCONFIG || typeof ESLINT_PATH_BABELCONFIG !== "string") {
 const reactEslintConfig = {
     extends: [
         "plugin:react/recommended",
-        "prettier/babel",
-        "prettier/react",
     ],
     env: {
         es6: true,
